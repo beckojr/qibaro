@@ -1,0 +1,117 @@
+@font-face {
+  font-family: 'basictitlefont';
+  src: url('../fonts/basictitlefont.ttf');
+}
+@font-face {
+  font-family: 'communist';
+  src: url(../fonts/COMMUNIS.ttf);
+}
+
+html, body {
+  height: 100%
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.btn-rs {
+  width: 100%;
+}
+
+#btn-facebook {
+  height: 50px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  font-family: 'communist';
+  background-color: #3b5998;
+  color: white;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+#btn-google {
+  height: 50px;
+  font-size: 1em;
+  font-family: 'communist';
+  background-color: #d62d20;
+  color: white;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+#btn-connexion {
+  width: 100%;
+  height: 50px;
+  font-family: 'communist';
+  background-color: #01579b;
+  color: white;
+  font-size: 15px;
+}
+
+#logo {
+  font-size: 40px;
+/*   color: #A23D25; */
+  color: #01579b;
+  font-family: 'basictitlefont';
+  font-weight: bold;
+}
+
+.mdl-card__title {
+  background-color: #f5f5f5;
+}
+
+.mdl-textfield {
+  font-family: 'communist';
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+  font-family: 'communist';
+  color: #757575 !important;
+}
+
+#signup {
+  right: -95px;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+#questions {
+  margin-top: 15px;
+}
+
+.mdl-card {
+  border-radius: 50px;
+}
+
+.mdl-textfield__input {
+  font-family: 'communist' !important;
+}
+
+.mdl-textfield__label {
+  font-size: 13px !important;
+}
+#c-email {
+  font-size: 1em !important;
+}
+
+#c-passwd {
+  font-size: 1em !important;
+}
+
+.mdl-card {
+  border-radius: 5px !important;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e0e0e0;
+  text-align: center;
+}
