@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'basictitlefont';
+  src: url('../fonts/basictitlefont.ttf');
+}
+@font-face {
+  font-family: 'communist';
+  src: url(../fonts/COMMUNIS.ttf);
+}
+
+html, body {
+  height: 100%
+}
+
+body {
+  background-color: #fafafa;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #01579b;
+  color: white;
+  text-align: center;
+}

@@ -40,7 +40,7 @@ body {
   text-transform: capitalize;
 }
 
-#btn-connexion {
+#btn-connexion, #btn-inscription {
   width: 100%;
   height: 50px;
   font-family: 'communist';
@@ -51,7 +51,7 @@ body {
 
 #logo {
   font-size: 40px;
-/*   color: #A23D25; */
+  /*   color: #A23D25; */
   color: #01579b;
   font-family: 'basictitlefont';
   font-weight: bold;
@@ -95,11 +95,11 @@ a:hover {
 .mdl-textfield__label {
   font-size: 13px !important;
 }
-#c-email {
+#c-email, #i-email {
   font-size: 1em !important;
 }
 
-#c-passwd {
+#c-passwd, #i-passwd {
   font-size: 1em !important;
 }
 
@@ -114,4 +114,9 @@ footer {
   left: 0;
   background-color: #e0e0e0;
   text-align: center;
+}
+
+#card-footer {
+  font-family: 'communist';
+
 }

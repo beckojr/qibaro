@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  {%block head%}
+
+  <meta charset="utf-8">
+  <title>
+    {%block title%}Qibaro - Pour inventer l'avenir{%endblock%}
+  </title>
+
+  {# Liens et métadonnées utilisable dans les deux pages (inscription et connexion) #}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Open+Sans+Condensed:300" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+  <script src="https://use.fontawesome.com/a7f3555ed9.js"></script>
+
+  {%block stylesheet%}
+  <link rel="stylesheet" href="../../static/css/page-layout.css"/>
+  {%endblock%}
+  {%endblock%}
+
+</head>
+<body>
+  <div class="mdl-grid">
+    <div class="mdl-layout mdl-js-layout">
+
+      <main class="mdl-layout__content">
+
+        <!-- Pied de page  -->
+        <footer class="mdl-min-footer">
+          <div class="mdl-mini-footer__left-section">
+            <ul class="mdl-mini-footer__link-list">
+              <li><a href="#">À propos</a></li>
+              <li><a href="#">Conditions d'utilisation</a></li>
+              <li><a href="#">Vie privée</a></li>
+            </ul>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

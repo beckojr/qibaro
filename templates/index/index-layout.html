@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
+  {%block head%}
+
   <meta charset="utf-8">
-  <title>Qibaro - Osons inventer l'avenir</title>
-  <link rel="stylesheet" href="../static/css/index.css"/>
+  <title>
+    {%block title%}Qibaro - Pour inventer l'avenir{%endblock%}
+  </title>
+
+  {# Liens et métadonnées utilisable dans les deux pages (inscription et connexion) #}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Open+Sans+Condensed:300" rel="stylesheet">
   <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
   <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
   <script src="https://use.fontawesome.com/a7f3555ed9.js"></script>
+
+  {%block stylesheet%}
+  <link rel="stylesheet" href="../../static/css/index.css"/>
+  {%endblock%}
+  {%endblock%}
 
 </head>
 <body>
@@ -41,32 +50,21 @@
                     Continuer avec Google</button>
 
                     <hr id="separteur-btn-rs">
+                    {% block card_text %}
 
-                    <!-- Formulaire de connexion -->
-                    <form class="" action="#" >
-                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label for="c-email" class="mdl-textfield__label" >E-mail</label>
-                        <input type="text" name="c-email" class="mdl-textfield__input" id="c-email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-                        <span class="mdl-textfield__error">Adresse e-mail non valide !</span>
-                      </div>
-
-                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label for="c-passwd" class="mdl-textfield__label">Mot de passe</label>
-                        <input type="password" name="c-passwd" class="mdl-textfield__input" id="c-passwd">
-                      </div>
-
-                      <button type="button" name="btn-connexion" id="btn-connexion" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Connexion</button>
-                    </form>
+                    {% endblock %}
 
                     <div id="questions">
-                      <a href="#" id="passw-recov">Mot de passe oublié?</a>
-                      <a href="inscription.html" id="signup">S'inscrire</a>
+                      {% block card_footer %}
+
+                      {% endblock %}
                     </div>
 
                   </div>
                 </div>
 
                 <!-- Pied de page  -->
+                {% block footer %}
                 <footer class="mdl-min-footer">
                   <div class="mdl-mini-footer__left-section">
                     <ul class="mdl-mini-footer__link-list">
@@ -76,6 +74,7 @@
                     </ul>
                   </div>
                 </footer>
+                {% endblock %}
 
               </div>
               <div class="mdl-layout-spacer"></div>
