@@ -15,8 +15,23 @@ body {
   background-color: #fafafa;
 }
 
+#logo {
+  position: relative;
+  font-family: 'basictitlefont';
+  font-weight: bold;
+  font-size: 40px;
+  margin-left: 10px;
+}
+
+.mdl-layout__header-row {
+  background-color: #01579b;
+}
+
 a {
   text-decoration: none;
+  position: relative;
+  font-family: 'communist';
+  color: #757575 !important;
 }
 
 a:hover {
@@ -28,7 +43,6 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #01579b;
-  color: white;
+  background-color: #e0e0e0;
   text-align: center;
 }
