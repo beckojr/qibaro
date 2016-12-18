@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Open+Sans+Condensed:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Roboto+Slab" rel="stylesheet">
   <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
   <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
   <script src="https://use.fontawesome.com/a7f3555ed9.js"></script>
@@ -43,12 +43,13 @@
             <div class="mdl-card__supporting-text">
 
               <!-- Boutons de connexion aux réseaux sociaux et inscription -->
-              <button type="button" name="btn-facebook" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-rs" id="btn-facebook"><i class="fa fa-facebook" aria-hidden="true"></i>
-                Continuer avec Facebook</button>
+              <div id="btns-rs">
+                <button type="button" name="btn-facebook" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-rs" id="btn-facebook"><i class="fa fa-facebook" aria-hidden="true"></i>
+                  Continuer avec Facebook</button>
                 <button type="button" name="btn-google" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect btn-rs" id="btn-google"><i class="fa fa-google-plus" aria-hidden="true"></i>
-                  Continuer avec Google</button>
+                    Continuer avec Google</button>
+              </div>
 
-                  <hr id="separteur-btn-rs">
                   {% block card_text %}
 
                   {% endblock %}

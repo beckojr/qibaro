@@ -5,34 +5,47 @@
 
   <meta charset="utf-8">
   <title>
-    {%block title%}Qibaro - Pour inventer l'avenir{%endblock%}
+    {%block title%}Qibaro - Pour oser inventer l'avenir{%endblock%}
   </title>
 
   {# Liens et métadonnées utilisable dans les deux pages (inscription et connexion) #}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../static/css/page-layout.css"/>
   <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa|Open+Sans+Condensed:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Roboto+Slab" rel="stylesheet">
   <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
   <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
   <script src="https://use.fontawesome.com/a7f3555ed9.js"></script>
 
   {%block stylesheet%}
-  <link rel="stylesheet" href="../../static/css/page-layout.css"/>
+
   {%endblock%}
+
   {%endblock%}
 
 </head>
 <body>
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-    <header class="mdl-layout__header">
-      <div class="mdl-layout__hader-row">
-        <h3 class="mdl-layout-header" id="logo">Qibaro</h3>
+    <header class="mdl-layout__header mdl-layout__header--waterfall mdl-shadow--3dp">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title" id="logo">Qibaro</span>
+
+        <div class="mdl-layout-spacer"></div>
+        <nav class="user-profil mdl-navigation">
+          <a href="#">Becko</a>
+        </nav>
       </div>
     </header>
 
     <main class="mdl-layout__content">
+
+      <div class="mdl-grid" id="content">
+        {% block content %}
+
+        {% endblock %}
+      </div>
 
       <!-- Pied de page  -->
       <footer class="mdl-min-footer">

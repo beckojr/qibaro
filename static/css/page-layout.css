@@ -2,40 +2,36 @@
   font-family: 'basictitlefont';
   src: url('../fonts/basictitlefont.ttf');
 }
-@font-face {
-  font-family: 'communist';
-  src: url(../fonts/COMMUNIS.ttf);
-}
-
-html, body {
-  height: 100%
-}
 
 body {
-  background-color: #fafafa;
+  margin: 0;
+  background-color: #EEEEEE;
 }
 
 #logo {
   position: relative;
   font-family: 'basictitlefont';
   font-weight: bold;
-  font-size: 40px;
-  margin-left: 10px;
-}
-
-.mdl-layout__header-row {
-  background-color: #01579b;
+  font-size: 35px;
 }
 
 a {
   text-decoration: none;
   position: relative;
-  font-family: 'communist';
+  font-family: 'Roboto Slab', 'Merriweather', serif;
   color: #757575 !important;
 }
 
-a:hover {
+footer > li > a:hover {
   text-decoration: underline;
+}
+
+.user-profil {
+  height: 100;
+  margin-right: 10px;
+}
+
+.user-profil:hover {
 }
 
 footer {

@@ -1,0 +1,36 @@
+#th-content, #pub-content { /*Liste des thématiques*/
+  padding-bottom: 15px;
+  font-family: 'Roboto Slab', 'Merriweather', serif;
+  /*list-style-position: inside;*/
+}
+
+#th-content > li:hover{
+  background-color: #FAFAFA;
+  border-radius: 2px;
+}
+
+#th-title, #pub-title {
+  border-bottom: solid 1px;
+  border-color: #BDBDBD;
+  font-family: 'Merriweather';
+  font-size: 13px;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #e0e0e0;
+  text-align: center;
+  font-family: 'Roboto Slab', 'Merriweather', serif;
+}

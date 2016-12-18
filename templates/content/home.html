@@ -1,0 +1,43 @@
+{% extends "/content/page-layout.html" %}
+
+{% block stylesheet %}
+  <link rel="stylesheet" href="../../static/css/home.css"/>
+{% endblock %}
+
+{% block content %}
+{# Section des thématiques sur la gauche #}
+<section class="mdl-cell mdl-cell--2-col mdl-cell--1-offset" id="left-section">
+  <div id="thematiques">
+    <h6 id="th-title">Thématiques</h6>
+    <ul id="th-content">
+      <li><a href="#">Économie</a></li>
+      <li><a href="#">Politique</a></li>
+      <li><a href="#">Économie</a></li>
+      <li>Politique</li>
+      <li>Économie</li>
+      <li>Politique</li>
+      <li>Économie</li>
+      <li>Politique</li>
+      <li>Économie</li>
+      <li>Politique</li>
+    </ul>
+  </div>
+
+  <div id="publications">
+    <h6 id="pub-title">Publications</h6>
+    <ul id="pub-content">
+      <li><a href="#"></a>Propositions</li>
+      <li><a href="#"></a>Édito</li>
+      <li><a href="#"></a>Débats</li>
+      <li><a href="#"></a>Coup de gueulle</li>
+    </ul>
+  </div>
+</section>
+
+{# <div class="mdl-layout-spacer"></div> #}
+
+{# Section des publications, de la timeline #}
+<section class="mdl-cell mdl-cell--5-col mdl-cell--1-offset" id="center-section">
+</section>
+<div class="mdl-layout-spacer"></div>
+{% endblock %}
