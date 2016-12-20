@@ -6,32 +6,41 @@
 body {
   margin: 0;
   background-color: #EEEEEE;
+  z-index: -99;
 }
 
-#logo {
+.mdl-layout__header-row {
+  background-color: #01579b;
+}
+
+#logo > a{
   position: relative;
   font-family: 'basictitlefont';
   font-weight: bold;
   font-size: 35px;
-}
-
-a {
   text-decoration: none;
-  position: relative;
-  font-family: 'Roboto Slab', 'Merriweather', serif;
-  color: #757575 !important;
-}
-
-footer > li > a:hover {
-  text-decoration: underline;
-}
-
-.user-profil {
-  height: 100;
-  margin-right: 10px;
+  color: white;
 }
 
 .user-profil:hover {
+  background-color: #0277BD;
+}
+
+.user-profil > a {
+  padding: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+#footer_list > li > a {
+  text-decoration: none;
+  position: relative;
+  font-family: 'Open Sans', 'Merriweather', serif;
+  color: #757575 !important;
+}
+
+#footer_list > li > a:hover {
+  text-decoration: underline;
 }
 
 footer {
@@ -39,6 +48,6 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #e0e0e0;
+  /*background-color: #e0e0e0;*/
   text-align: center;
 }

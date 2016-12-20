@@ -4,32 +4,44 @@
   <link rel="stylesheet" href="../../static/css/home.css"/>
 {% endblock %}
 
+{% block nav_block %}
+
+<nav class="user-profil mdl-navigation">
+  <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect" id="btn-profil">BECKO</button>
+</nav>
+
+<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn-profil">
+  <li class="mdl-menu__item">Profil</li>
+  <li class="mdl-menu__item">Compte</li>
+  <li class="mdl-menu__item">Déconnexion</li>
+</ul>
+{% endblock %}
+
 {% block content %}
 {# Section des thématiques sur la gauche #}
 <section class="mdl-cell mdl-cell--2-col mdl-cell--1-offset" id="left-section">
   <div id="thematiques">
     <h6 id="th-title">Thématiques</h6>
-    <ul id="th-content">
+    <ul id="th-content" class="side_list">
       <li><a href="#">Économie</a></li>
       <li><a href="#">Politique</a></li>
       <li><a href="#">Économie</a></li>
-      <li>Politique</li>
-      <li>Économie</li>
-      <li>Politique</li>
-      <li>Économie</li>
-      <li>Politique</li>
-      <li>Économie</li>
-      <li>Politique</li>
+      <li><a href="#">Économie</a></li>
+      <li><a href="#">Politique</a></li>
+      <li><a href="#">Économie</a></li>
+      <li><a href="#">Économie</a></li>
+      <li><a href="#">Politique</a></li>
+      <li><a href="#">Économie</a></li>
     </ul>
   </div>
 
   <div id="publications">
     <h6 id="pub-title">Publications</h6>
-    <ul id="pub-content">
-      <li><a href="#"></a>Propositions</li>
-      <li><a href="#"></a>Édito</li>
-      <li><a href="#"></a>Débats</li>
-      <li><a href="#"></a>Coup de gueulle</li>
+    <ul id="pub-content" class="side_list">
+      <li><a href="#">Propositions</a></li>
+      <li><a href="#">Édito</a></li>
+      <li><a href="#">Débats</a></li>
+      <li><a href="#">Coup de gueulle</a></li>
     </ul>
   </div>
 </section>
