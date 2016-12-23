@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  background-color: #EEEEEE;
+  background-color: #fafafa;
   z-index: -99;
 }
 
@@ -32,14 +32,14 @@ body {
   text-decoration: none;
 }
 
-#footer_list > li > a {
+#footer-left > li > a {
   text-decoration: none;
   position: relative;
   font-family: 'Open Sans', 'Merriweather', serif;
-  color: #757575 !important;
+  color: white !important;
 }
 
-#footer_list > li > a:hover {
+#footer-left > li > a:hover {
   text-decoration: underline;
 }
 
@@ -48,6 +48,6 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  /*background-color: #e0e0e0;*/
+  background-color: #424242;
   text-align: center;
 }

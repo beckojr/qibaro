@@ -1,6 +1,6 @@
 #th-content, #pub-content { /*Liste des thématiques*/
   padding-bottom: 15px;
-  font-family: 'Open Sans', 'Merriweather', serif;
+  font-family: 'Open Sans', serif;
   /*list-style-position: inside;*/
 }
 
@@ -11,23 +11,30 @@
   padding-left: 10px;
 }
 
+#left-section div {
+  background-color: white;
+  box-shadow: 0 1px 1px 0;
+}
+
 .side_list > li > a{
   text-decoration: none;
   color: #424242;
 }
 
 .side_list > li:hover{
-  background-color: #F5F5F5;
+  border-left: 2px solid #01579b ;
 }
 
-.side_list > li > a:active {
-  background-color: #F5F5F5;
+.side_list  li a:hover {
+  color: #01579b;
 }
 
 #th-title, #pub-title {
-  border-bottom: solid 1px;
   border-color: #BDBDBD;
   font-family: 'Open Sans';
+  padding-left: 10px;
+  padding-top: 5px;
+  margin-bottom: -5px;
 }
 
 #btn-profil {
@@ -36,6 +43,69 @@
   font-family: 'Open Sans';
 }
 
+#profil-menu {
+  font-family: 'Open Sans';
+}
+
 .mdl-layout__header--waterfall{
    overflow: visible;
+}
+
+#center-section {
+  margin-top: 32px;
+  margin-left: 50px;
+}
+
+.post {
+  position: relative;
+  background-color: white;
+  padding: 15px;
+  font-family: 'Quicksand', serif;
+  width: 100%;
+  box-shadow: 0 1px 1px 0;
+  border-radius: 2px;
+}
+
+.post-title a {
+  font-family: 'Quicksand' !important;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.post-title a:hover {
+  color: #01579b;
+}
+
+.post-header {
+  font-size: 12px;
+}
+
+.post-header a {
+  color: black;
+  text-decoration: none;
+}
+
+.post-footer {
+  position: relative;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.post-footer button {
+  text-transform: capitalize;
+  font-family: 'Quicksand' ;
+  color: #424242;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.post-footer .daccord:hover {
+  background-color: #01579b;
+  color: white;
+}
+
+.post-footer .pasdaccord:hover {
+  background-color: #c62828;
+  color: white;
 }

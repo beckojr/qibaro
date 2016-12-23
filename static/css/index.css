@@ -3,6 +3,10 @@
   src: url('../fonts/basictitlefont.ttf');
 }
 
+body {
+  background-color: #fafafa;
+}
+
 .btn-rs {
   width: 100%;
 }
@@ -63,7 +67,7 @@
   text-decoration: none;
   position: relative;
   font-family: 'Open Sans', 'Merriweather', serif;
-  color: #757575 !important;
+  color: white !important;
 }
 
 #signup {
@@ -125,7 +129,7 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  /*background-color: #e0e0e0;*/
+  background-color: #424242;
   text-align: center;
   margin-bottom: 1px;
 }
