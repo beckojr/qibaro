@@ -1,7 +1,10 @@
+#thematiques {
+  position: fixed;
+}
+
 #th-content, #pub-content { /*Liste des thématiques*/
   padding-bottom: 15px;
-  font-family: 'Open Sans', serif;
-  /*list-style-position: inside;*/
+  font-family: 'Viga', serif;
 }
 
 .side_list > li {
@@ -11,14 +14,9 @@
   padding-left: 10px;
 }
 
-#left-section div {
-  background-color: white;
-  box-shadow: 0 1px 1px 0;
-}
-
 .side_list > li > a{
   text-decoration: none;
-  color: #424242;
+  color: #757575;
 }
 
 .side_list > li:hover{
@@ -29,22 +27,22 @@
   color: #01579b;
 }
 
-#th-title, #pub-title {
-  border-color: #BDBDBD;
-  font-family: 'Open Sans';
+#th-title {
+  font-family: 'Viga';
   padding-left: 10px;
-  padding-top: 5px;
-  margin-bottom: -5px;
+  border-bottom: solid 1px #757575;
+  color: #757575;
+  font-weight: 700;
 }
 
 #btn-profil {
   height: 100%;
-  color: white;
-  font-family: 'Open Sans';
+  color: #01579b;
+  font-family: 'Viga';
 }
 
 #profil-menu {
-  font-family: 'Open Sans';
+  font-family: 'Viga';
 }
 
 .mdl-layout__header--waterfall{
@@ -62,42 +60,53 @@
   padding: 15px;
   font-family: 'Quicksand', serif;
   width: 100%;
-  box-shadow: 0 1px 1px 0;
-  border-radius: 2px;
+  /*box-shadow: 0 1px 1px 0;*/
+  border-radius: 3px;
+  margin-bottom: 15px;
 }
 
 .post-title a {
-  font-family: 'Quicksand' !important;
+  font-family: 'Merriweather' !important;
   color: black;
   text-decoration: none;
   font-weight: bold;
-}
-
-.post-title a:hover {
-  color: #01579b;
 }
 
 .post-header {
   font-size: 12px;
+  color: #757575;
 }
 
 .post-header a {
-  color: black;
+  color: #01579b;
   text-decoration: none;
+  font-weight: bold;
+}
+
+.post-text {
+  font-size: 16px;
+  color: #757575;
+  font-weight: 600;
 }
 
 .post-footer {
   position: relative;
-  margin-top: -10px;
-  margin-bottom: -10px;
 }
 
 .post-footer button {
   text-transform: capitalize;
-  font-family: 'Quicksand' ;
+  font-family: 'Viga';
   color: #424242;
   font-weight: bold;
   font-size: 12px;
+}
+
+.post-footer .daccord {
+  color: #01579b;
+}
+
+.post-footer .pasdaccord {
+  color: #c62828;
 }
 
 .post-footer .daccord:hover {
