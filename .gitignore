@@ -1,6 +1,5 @@
 note.md
 *.pyc
-venv/
 instance/
 stack.md
 site-map.md
