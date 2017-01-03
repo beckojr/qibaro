@@ -1,3 +1,6 @@
 note.md
-server.pyc
-venv/bin venv/include venv/lib venv/local venv/pip-selfcheck.json
+*.pyc
+venv/
+instance/
+stack.md
+site-map.md
