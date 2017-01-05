@@ -1,7 +1,7 @@
-{% extends "/content/page-layout.html" %}
+{% extends "index_layout.html" %}
 
 {% block stylesheet %}
-  <link rel="stylesheet" href="../../static/css/home.css"/>
+  <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}"/>
 {% endblock %}
 
 {% block nav_block %}
