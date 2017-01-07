@@ -1,4 +1,4 @@
-{% extends ".signing_layout.html" %}
+{% extends "signing_layout.html" %}
 
 {% block card_text %}
 <!-- Formulaire de connexion -->
@@ -29,5 +29,5 @@
 {% endblock %}
 
 {% block card_footer %}
-<span id="i-card-footer">Déja inscrit? <a href="/">Se connecter</a></span>
+<span id="i-card-footer">Déja inscrit? <a href="{{url_for('.signin')}}">Se connecter</a></span>
 {% endblock %}

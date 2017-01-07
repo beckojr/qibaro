@@ -10,4 +10,4 @@ app.register_blueprint(about_b, url_prefixe="/about/")
 app.register_blueprint(admin_b, url_prefixe="/admin/")
 app.register_blueprint(index_b) # On arrive directement sur le feed qd on lance l'appli
 app.register_blueprint(profile_b, url_prefixe="/profile/")
-app.register_blueprint(signing_b, url_prefixe="/signing/")
+app.register_blueprint(signing_b)

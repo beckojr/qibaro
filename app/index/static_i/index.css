@@ -2,16 +2,19 @@
   position: fixed;
 }
 
-#th-content, #pub-content { /*Liste des thématiques*/
+#th-content { /*Liste des thématiques*/
   padding-bottom: 15px;
-  font-family: 'Viga', serif;
+  font-family: 'Open Sans', serif;
+  width: 100%;
 }
 
 .side_list > li {
   list-style-type: none;
   position: relative;
-  left: -30px;
+  left: -40px;
   padding-left: 10px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .side_list > li > a{
@@ -19,30 +22,25 @@
   color: #757575;
 }
 
-.side_list > li:hover{
-  border-left: 2px solid #01579b ;
-}
-
-.side_list  li a:hover {
-  color: #01579b;
+.side_list > li:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 #th-title {
-  font-family: 'Viga';
-  padding-left: 10px;
+  font-family: 'Open Sans';
+  /*padding-left: 10px;*/
   border-bottom: solid 1px #757575;
   color: #757575;
-  font-weight: 700;
 }
 
 #btn-profil {
   height: 100%;
   color: #01579b;
-  font-family: 'Viga';
+  font-family: 'Open Sans';
 }
 
 #profil-menu {
-  font-family: 'Viga';
+  font-family: 'Open Sans';
 }
 
 .mdl-layout__header--waterfall{
@@ -51,25 +49,24 @@
 
 #center-section {
   margin-top: 32px;
-  margin-left: 50px;
+  /*margin-left: 50px;*/
 }
 
 .post {
+  max-height: 621px !important;
   position: relative;
   background-color: white;
   padding: 15px;
-  font-family: 'Quicksand', serif;
+  font-family: 'Martel', serif;
   width: 100%;
-  /*box-shadow: 0 1px 1px 0;*/
   border-radius: 3px;
   margin-bottom: 15px;
 }
 
 .post-title a {
-  font-family: 'Merriweather' !important;
+  font-family: 'Josefin Sans' !important;
   color: black;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .post-header {
@@ -80,41 +77,33 @@
 .post-header a {
   color: #01579b;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .post-text {
   font-size: 16px;
   color: #757575;
-  font-weight: 600;
 }
 
 .post-footer {
   position: relative;
+  font-family: 'Viga', 'Open Sans', sans-serif;
+  color: #757575;
+  font-size: 12px;
+}
+
+.points {
+  margin-left: 10px;
+
 }
 
 .post-footer button {
   text-transform: capitalize;
-  font-family: 'Viga';
-  color: #424242;
-  font-weight: bold;
+  font-family: 'Viga', 'Open Sans', sans-serif;
+  color: #757575;
   font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
-.post-footer .daccord {
-  color: #01579b;
-}
-
-.post-footer .pasdaccord {
-  color: #c62828;
-}
-
-.post-footer .daccord:hover {
-  background-color: #01579b;
-  color: white;
-}
-
-.post-footer .pasdaccord:hover {
-  background-color: #c62828;
-  color: white;
+.post-footer button[title]:hover:after {
+  content: attr(title);
 }

@@ -1,4 +1,6 @@
 from flask import Blueprint, render_template, abort
 from jinja2 import TemplateNotFound
 
-profile_b = Blueprint('profile', __name__, template_folder='templates', static_folder='static')
+profile_b = Blueprint('profile', __name__,
+                        template_folder='templates',
+                        static_folder='static_p')

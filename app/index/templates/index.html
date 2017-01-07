@@ -1,7 +1,7 @@
 {% extends "index_layout.html" %}
 
 {% block stylesheet %}
-  <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}"/>
+  <link rel="stylesheet" href="{{url_for('.static', filename='index.css')}}"/>
 {% endblock %}
 
 {% block nav_block %}
@@ -21,20 +21,17 @@
 {# Section des thématiques sur la gauche #}
 <section class="mdl-cell mdl-cell--2-col mdl-cell--1-offset" id="left-section">
   <div id="thematiques" class="">
-    <div class="side-list-title">
-      <h6 id="th-title">Thématiques</h6>
-    </div>
+    <h6 id="th-title">Thématiques</h6>
     <ul id="th-content" class="side_list">
-      <li><a href="#"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Éducation</a></li>
-      <li><a href="#"><i class="fa fa-users" aria-hidden="true"></i> Société</a></li>
-      <li><a href="#"><i class="fa fa-stethoscope" aria-hidden="true"></i> Santé</a></li>
-      <li><a href="#"><i class="fa fa-university" aria-hidden="true"></i> Politique</a></li>
-      <li><a href="#"><i class="fa fa-usd" aria-hidden="true"></i> Économie</a></li>
-      <li><a href="#"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Innovation</a></li>
-      <li><a href="#"><i class="fa fa-globe" aria-hidden="true"></i> Environnement</a></li>
-      <li><a href="#"><i class="fa fa-paint-brush" aria-hidden="true"></i> Culture</a></li>
-      <li><a href="#"><i class="fa fa-balance-scale" aria-hidden="true"></i>
-Justice</a></li>
+      <li><a href="#">Éducation</a></li>
+      <li><a href="#">Société</a></li>
+      <li><a href="#">Santé</a></li>
+      <li><a href="#">Politique</a></li>
+      <li><a href="#">Économie</a></li>
+      <li><a href="#">Innovation</a></li>
+      <li><a href="#">Environnement</a></li>
+      <li><a href="#">Culture</a></li>
+      <li><a href="#">Justice</a></li>
     </ul>
   </div>
 </section>
@@ -46,7 +43,7 @@ Justice</a></li>
       <img src="" alt="" class="avatar"/>
       <span class="author"><a href="#">Becko Junior Camara</a></span>
       <div class="mdl-layout-spacer"></div>
-      <span class="date">23 décembre 2016, 14:00</span>
+      <span class="date">23 décembre 2016 14:00</span>
     </div>
 
     <div class="post-content">
@@ -65,10 +62,12 @@ Justice</a></li>
     <hr>
 
     <div class="post-footer">
-      <button type="button" name="button" class="mdl-button mdl-js-button daccord"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-D'accord</button>
-    <button type="button" name="button" class="mdl-button mdl-js-button pasdaccord"><i class="fa fa-arrow-down" aria-hidden="true"></i>
-Pas d'accord</button>
+      <button type="button" name="button" title=" D'accord" class="mdl-button mdl-js-button daccord"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+        <span for="" class="mdl-tooltip">D'accord</span>
+      </button>
+    <button type="button" name="button" title=" Pas D'accord" class="mdl-button mdl-js-button pasdaccord"><i class="fa fa-arrow-down" aria-hidden="true"></i></button>
+
+    <span class="points">128 points</span>
     </div>
   </article>
 

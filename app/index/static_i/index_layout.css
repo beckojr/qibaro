@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'basictitlefont';
+  src: url('fonts/basictitlefont.ttf');
+}
+
+body {
+  margin: 0;
+  z-index: -99;
+}
+
+.mdl-layout__header-row {
+  background-color: #fafafa;
+}
+
+#logo a {
+  position: relative;
+  text-transform: uppercase;
+  font-family: 'basictitlefont', 'Marvel', sans-serif;;
+  font-weight: bolder;
+  font-size: 35px;
+  text-decoration: none;
+  color: #01579b;;
+}
+
+.user-profil a {
+  padding: 5px;
+  color: red;
+  text-decoration: none;
+}
+
+#footer-left > li > a {
+  text-decoration: none;
+  font-family: 'Viga', 'Open Sans', serif;
+  color: white !important;
+}
+
+#footer-left > li > a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #424242;
+  text-align: center;
+}

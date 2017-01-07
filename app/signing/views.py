@@ -3,9 +3,9 @@ from jinja2 import TemplateNotFound
 
 signing_b = Blueprint('signing', __name__,
                                 template_folder='templates',
-                                static_folder='static_i')
+                                static_folder='static_s')
 
-@signing_b.route('/signing/signin')
+@signing_b.route('/signin')
 def signin():
     return render_template('/signin.html')
 

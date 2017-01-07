@@ -1,0 +1,138 @@
+@font-face {
+  font-family: 'basictitlefont';
+  src: url("fonts/basictitlefont.ttf");
+}
+
+html {
+  height: 100%;
+}
+body {
+  background-color: #fafafa;
+}
+
+.btn-rs {
+  width: 100%;
+}
+
+#btn-facebook {
+  height: 45px;
+  margin-bottom: 10px;
+  font-size: 1em;
+  font-family: 'Viga', 'Merriweather', serif;
+  background-color: #3b5998;
+  color: white;
+  text-transform: capitalize;
+}
+
+#btn-google {
+  height: 45px;
+  font-size: 1em;
+  font-family: 'Viga', 'Merriweather', serif;
+  background-color: #d62d20;
+  color: white;
+  text-transform: capitalize;
+}
+
+#btns-rs {
+  border-bottom: 1px solid;
+  padding-bottom: 10px;
+  border-color: #e0e0e0;
+}
+
+#btn-connexion, #btn-inscription {
+  width: 100%;
+  height: 45px;
+  font-family: 'Viga', 'Merriweather', serif;
+  background-color: #01579b;
+  color: white;
+  font-size: 15px;
+}
+
+#logo {
+  margin-bottom: -10px;
+  font-size: 40px;
+  color: #01579b;
+  font-family: 'basictitlefont', 'Marvel', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.mdl-card__title {
+  background-color: #f5f5f5;
+}
+
+.mdl-textfield {
+  font-family: 'Viga', 'Merriweather', serif;
+  margin-bottom: -10px;
+}
+
+#footer_list > li > a {
+  text-decoration: none;
+  position: relative;
+  font-family: 'Viga', 'Merriweather', serif;
+  color: white !important;
+}
+
+#signup {
+  position: relative;
+  right: -95px;
+}
+
+#footer_list > li > a:hover {
+  text-decoration: underline !important;
+}
+
+#questions {
+  margin-top: 15px;
+}
+
+#questions > a {
+  color: #757575 !important;
+  text-decoration: none;
+  font-family: 'Viga', 'Merriweather', serif;
+}
+
+#i-card-footer {
+  color: #757575;
+  font-family: 'Viga', 'Merriweather', serif !important;
+}
+
+#i-card-footer > a{
+  position: relative;
+  right: -130px;
+  text-decoration: none;
+  color: #757575;
+}
+
+.mdl-card {
+  border-radius: 5px;
+}
+
+.mdl-textfield__input {
+  font-family: 'Viga', 'Merriweather', serif !important;
+}
+
+.mdl-textfield__label {
+  font-size: 13px !important;
+}
+#c-email, #i-email {
+  font-size: 1em !important;
+}
+
+#c-passwd, #i-passwd {
+  font-size: 1em !important;
+}
+
+.mdl-card {
+  border-radius: 3px !important;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  margin-top: 15px;
+  width: 100%;
+  background-color: #424242;
+  text-align: center;
+}
