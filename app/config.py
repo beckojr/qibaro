@@ -1,0 +1,2 @@
+DEBUG=True
+MONGODB_DATABASE='qibaro'

@@ -1,0 +1,17 @@
+-e git+https://github.com/beckojr/qibaro.git@cd0965f7a8aeb759f6b56298ac4b3a72be03fbfa#egg=app
+bcrypt==3.1.2
+cffi==1.9.1
+click==6.6
+Flask==0.12
+Flask-Assets==0.12
+Flask-Bcrypt==0.7.1
+Flask-MongoKit==0.6
+itsdangerous==0.24
+Jinja2==2.8.1
+MarkupSafe==0.23
+mongokit==0.9.1.1
+pycparser==2.17
+pymongo==3.4.0
+six==1.10.0
+webassets==0.12.0
+Werkzeug==0.11.15
