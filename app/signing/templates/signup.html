@@ -2,7 +2,7 @@
 
 {% block card_text %}
 <!-- Formulaire de connexion -->
-<form class="" action="#" >
+<form class="" action="{{url_for('.signup')}}" method="post">
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     <label for="i-prenom" class="mdl-textfield__label" >Prénom</label>
     <input type="text" name="i-prenom" class="mdl-textfield__input" id="i-prenom">
@@ -24,7 +24,7 @@
     <input type="password" name="i-passwd" class="mdl-textfield__input" id="i-passwd">
   </div>
 
-  <button type="button" name="btn-inscription" id="btn-inscription" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Inscription</button>
+  <button type="submit" name="btn-inscription" id="btn-inscription" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Inscription</button>
 </form>
 {% endblock %}
 

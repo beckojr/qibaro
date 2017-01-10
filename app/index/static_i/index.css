@@ -1,10 +1,23 @@
+.mdl-navigation button {
+  color: #757575;
+  font-family: 'Viga', 'Open Sans', serif;
+}
+
+#profil-menu {
+  font-family: 'Viga', 'Open Sans', serif;
+}
+
+.mdl-layout__header--waterfall{
+   overflow: visible;
+}
+
 #thematiques {
   position: fixed;
 }
 
 #th-content { /*Liste des thématiques*/
   padding-bottom: 15px;
-  font-family: 'Open Sans', serif;
+  font-family: 'Viga', 'Open Sans', serif;
   width: 100%;
 }
 
@@ -12,9 +25,9 @@
   list-style-type: none;
   position: relative;
   left: -40px;
-  padding-left: 10px;
+  padding: 5px;
   width: 100%;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
 }
 
 .side_list > li > a{
@@ -28,28 +41,12 @@
 
 #th-title {
   font-family: 'Open Sans';
-  /*padding-left: 10px;*/
   border-bottom: solid 1px #757575;
   color: #757575;
 }
 
-#btn-profil {
-  height: 100%;
-  color: #01579b;
-  font-family: 'Open Sans';
-}
-
-#profil-menu {
-  font-family: 'Open Sans';
-}
-
-.mdl-layout__header--waterfall{
-   overflow: visible;
-}
-
 #center-section {
   margin-top: 32px;
-  /*margin-left: 50px;*/
 }
 
 .post {
@@ -102,8 +99,4 @@
   color: #757575;
   font-size: 12px;
   background-color: rgba(0, 0, 0, 0.1);
-}
-
-.post-footer button[title]:hover:after {
-  content: attr(title);
 }

@@ -1,55 +1,39 @@
 from datetime import datetime
-from flask.ext.mongokit import MongoKit, Document
 
-# Import of the DB
-from app import db
+# Flask extensions import
+from flask_mongoalchemy import MongoAlchemy
+from flask_bcrypt import Bcrypt
+
+db = MongoAlchemy()
+bcrypt = Bcrypt() # Extension for passwords encrypting purpose
 
 # Definition of the user Collection
-class Utilisateur(Document):
+class Utilisateur(db.Document):
     """Collection defining the users of the app"""
 
-    __collection__ = 'utilisateur'
-    structure {
-        'prenom': str,
-        'nom': str,
-        'email': str,
-        'motpasse': str,
-        'bio': str,
-        'profession': str,
-    }
-
-    required_fields = ['prenom', 'nom', 'email', 'motpasse']
-    use_dot_notation = True
+    prenom = db.StringField()
+    nom = db.StringField()
+    email = db.StringField()
+    motdepasse = db.StringField()
+    bio = db.StringField(required=False)
+    profession = db.StringField(required=False)
+    volontaire = db.BoolField(required=False, default=False)
 
 # Publications document definition
-class Publication(Document):
+class Publication(db.Document):
     """Publications collection definition"""
-    __collection__ = 'publication'
-    structure {
-        'auteur': str,
-        'titre': str,
-        'contenu': str,
-        'creation': datetime,
-        'commentaires': list,
-        'points': int,
-    }
-    required_fields = ['titre', 'contenu', 'auteur']
-    default_values = {'creation': datetime.utcnow}
-    use_dot_notation = True
+
+    auteur = db.StringField()
+    titre = db.StringField()
+    contenu = db.StringField()
+    creation = db.CreatedField()
+    commentaires = db.ListField(db.ObjectIdField(required=False))
+    points = db.IntField(required=False, default=0)
 
 # Comments Document definition
-class Commentaire(Document):
+class Commentaire(db.Document):
     """Comments collection definition"""
-    __collection__ = 'commentaire'
-    structure {
-        'auteur': str,
-        'contenu': str,
-        'creation': datetime,
-    }
-    required_fields = ['auteur', 'contenu']
-    default_values = {'creation': datetime.utcnow}
-    use_dot_notation = True
 
-
-# Registration of the definitions
-db.register([Utilisateur, Publication, Commentaire])
+    auteur = db.ObjectIdField()
+    contenu = db.CreatedField()
+    creation = db.CreatedField()

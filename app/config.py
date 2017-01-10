@@ -1,2 +1,2 @@
-DEBUG=True
-MONGODB_DATABASE='qibaro'
+DEBUG = True
+MONGOALCHEMY_DATABASE = 'qibaro'
