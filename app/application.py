@@ -4,9 +4,12 @@ def create_app(config_file):
     app = Flask(__name__)
     app.config.from_pyfile(config_file)
 
-    from models import db, bcrypt
+    from models import db, bcrypt, oid, login_manager
     db.init_app(app)
     bcrypt.init_app(app)
+    oid.init_app(app)
+    login_manager.init_app(app)
+    # oauth.init_app(app)
 
     from app.about.views import about_b
     from app.admin.views import admin_b
