@@ -115,11 +115,11 @@ body {
 .mdl-textfield__label {
   font-size: 13px !important;
 }
-#c-email, #i-email {
+#email {
   font-size: 1em !important;
 }
 
-#c-passwd, #i-passwd {
+#passwd {
   font-size: 1em !important;
 }
 

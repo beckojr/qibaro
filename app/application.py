@@ -4,11 +4,13 @@ def create_app(config_file):
     app = Flask(__name__)
     app.config.from_pyfile(config_file)
 
-    from models import db, bcrypt, oid, login_manager
-    db.init_app(app)
-    bcrypt.init_app(app)
-    oid.init_app(app)
-    login_manager.init_app(app)
+    from models import db, bcrypt, oid, login_manager, csrf
+
+    db.init_app(app) # DB initialisation
+    bcrypt.init_app(app) # Bcrypt hashing initialisation
+    oid.init_app(app) # OpenID initialisation
+    login_manager.init_app(app) # flask_login initialisation
+    csrf.init_app(app) # CSRF Protection initialisation for all the app 
     # oauth.init_app(app)
 
     from app.about.views import about_b
