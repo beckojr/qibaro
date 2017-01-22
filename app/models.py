@@ -1,10 +1,11 @@
 # coding=utf-8
+
 from datetime import datetime
 
 # Flask extensions import
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField
-from wtforms.validators import DataRequired, Email, InputRequired, Regexp, Length
+from wtforms.validators import DataRequired, Email, InputRequired, Regexp, Length, ValidationError
 from flask_wtf.csrf import CSRFProtect
 
 from flask_mongoalchemy import MongoAlchemy
@@ -28,11 +29,27 @@ csrf = CSRFProtect()
 
 # Forms definition
 class LoginForm(FlaskForm):
-    email = StringField(u'E-mail', [
-                                InputRequired(),
-                                Email()
-                                    ])
+    email = StringField(u'E-mail', [InputRequired(), Email()])
     passwd = PasswordField(u'Mot de passe', [InputRequired()])
+
+    def validate_passwd(form, field):
+        """
+        Méthode appellée après le passage de tous les validateurs de la classe
+        """
+
+        try:
+            # On essaye de récuperer l'utilisateur à partir de son adresse mail
+            utilisateur = Utilisateur.query.filter(Utilisateur.email == form.email.data).one()
+        except:
+            print "Il y a une erreur"
+
+        if utilisateur is None:
+            raise ValidationError("Utilisateur invalide")
+
+        if not utilisateur.is_valid_password(form.passwd.data):
+            raise ValidationError("Mot de passe invalide")
+
+        form.utilisateur = utilisateur
 
 class RegistrationForm(FlaskForm):
     prenom = StringField(u'Prénom', [
@@ -50,6 +67,14 @@ class RegistrationForm(FlaskForm):
                                                 Length(min = 6, max = 10, message="Le mot de passe doit être compris entre 6 et 10 caractères")
                                             ])
 
+    def validate_email(form, field):
+
+        utilisateur = Utilisateur.query.filter(Utilisateur.email == field.data).first()
+        if utilisateur is not None:
+            raise ValidationError("L'utilisateur existe dejà")
+
+
+
 # Collections definition
 # Definition of the user Collection
 class Utilisateur(db.Document):
@@ -58,10 +83,20 @@ class Utilisateur(db.Document):
     prenom = db.StringField()
     nom = db.StringField()
     email = db.StringField()
-    motdepasse = db.StringField()
+    _motdepasse = db.StringField()
     bio = db.StringField(required=False)
     profession = db.StringField(required=False)
     volontaire = db.BoolField(required=False, default=False)
+
+    def motdepasse(self):
+        return self._motdepasse
+
+    def motdepasse(self, passwd):
+        self._motdepasse = bcrypt.generate_password_hash(passwd)
+
+    def is_valid_password(self, passwd):
+        """Password validation method"""
+        return bcrypt.check_password_hash(self._motdepasse, passwd)
 
     def is_authenticated():
         return True
@@ -74,6 +109,7 @@ class Utilisateur(db.Document):
 
     def get_id():
         return self.email
+
 
 
 # Publications document definition

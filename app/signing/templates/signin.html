@@ -2,7 +2,7 @@
 
 {% block card_text %}
 <!-- Formulaire de connexion -->
-<form class="" action="{{url_for('.signin')}}" method="post">
+<form class="" action="{{url_for('.signin')}}" method="POST">
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     {{ form.csrf_token }}
     {{form.email.label(class_='mdl-textfield__label')}}
@@ -18,7 +18,7 @@
     <input type="password" name="c-passwd" class="mdl-textfield__input" id="c-passwd"> #}
   </div>
 
-  <button type="button" name="btn-connexion" id="btn-connexion" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Connexion</button>
+  <button type="submit" name="btn-connexion" id="btn-connexion" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Connexion</button>
 </form>
 {% endblock %}
 

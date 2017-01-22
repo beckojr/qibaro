@@ -1,4 +1,5 @@
 *.pdf
+note.md
 npm*
 venv/
 note.md
