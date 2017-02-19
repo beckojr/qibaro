@@ -40,13 +40,16 @@ class LoginForm(FlaskForm):
         try:
             # On essaye de récuperer l'utilisateur à partir de son adresse mail
             utilisateur = Utilisateur.query.filter(Utilisateur.email == form.email.data).one()
+            print "Mot de passe validé"
         except:
             print "Il y a une erreur"
 
         if utilisateur is None:
+            print "Utilisateur non valide"
             raise ValidationError("Utilisateur invalide")
 
         if not utilisateur.is_valid_password(form.passwd.data):
+            print "Mot de passe invalide"
             raise ValidationError("Mot de passe invalide")
 
         form.utilisateur = utilisateur
@@ -98,16 +101,16 @@ class Utilisateur(db.Document):
         """Password validation method"""
         return bcrypt.check_password_hash(self._motdepasse, passwd)
 
-    def is_authenticated():
+    def is_authenticated(self):
         return True
 
-    def is_active():
+    def is_active(self):
         return True
 
-    def is_anonymous():
+    def is_anonymous(self):
         return False
 
-    def get_id():
+    def get_id(self):
         return self.email
 
 

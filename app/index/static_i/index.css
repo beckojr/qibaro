@@ -1,114 +1,69 @@
 .mdl-navigation button {
-  color: #757575;
+  color: white;
   font-family: 'Viga', 'Open Sans', serif;
 }
 
-#profil-menu {
+#profil-menu li a {
   font-family: 'Viga', 'Open Sans', serif;
+  text-decoration: none;
+  color: #757575;
 }
 
 .mdl-layout__header--waterfall{
    overflow: visible;
 }
 
-#thematiques {
-  position: fixed;
-}
-
-#th-content { /*Liste des thématiques*/
-  padding-bottom: 15px;
-  font-family: 'Viga', 'Open Sans', serif;
-  width: 100%;
-}
-
-.side_list > li {
-  list-style-type: none;
+.mdl-layout__drawer-button {
   position: relative;
-  left: -40px;
-  width: 100%;
-  /*margin-bottom: 10px;*/
-}
-
-.side_list > li > a{
-  text-decoration: none;
-  position: relative;
-  display: block;
-  color: #757575;
-  padding: 5px;
-}
-
-.side_list > li a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: black;
-  border-left: solid 2px #01579b;
-  padding-left: 5px;
-}
-
-.side_list > li a:active {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: black;
-  border-left: solid 2px #01579b;
-  padding-left: 5px;
-}
-
-#th-title {
-  font-family: 'Open Sans';
-  border-bottom: solid 1px #757575;
-  color: #757575;
-}
-
-#center-section {
-  margin-top: 32px;
+  top: -8px;
+  color: white !important;
+  background-color: #01579b !important;
 }
 
 .post {
-  max-height: 621px !important;
+  max-height: 620px !important;
   position: relative;
   background-color: white;
-  padding: 15px;
+  padding: 10px;
   font-family: 'Martel', serif;
-  width: 100%;
-  border-radius: 3px;
-  margin-bottom: 15px;
+  /*border-radius: 3px;*/
+  margin-bottom: 10px;
 }
 
-.post-title a {
-  font-family: 'Josefin Sans' !important;
+.mdl-card__title-text {
+  font-family: 'Playfair Display', serif !important;
   color: black;
+}
+
+.mdl-card__title-text a {
   text-decoration: none;
+  color: black;
 }
 
-.post-header {
-  font-size: 12px;
-  color: #757575;
-}
-
-.post-header a {
+.mdl-card__title-text a:hover {
   color: #01579b;
-  text-decoration: none;
 }
 
-.post-text {
-  font-size: 16px;
+.mdl-card .mdl-card__supporting-text {
+  max-height: 200px !important;
+  text-align: justify;
+  font-size: 14px;
   color: #757575;
 }
 
-.post-footer {
+.mdl-card-actions {
   position: relative;
-  font-family: 'Viga', 'Open Sans', sans-serif;
-  color: #757575;
+  margin-top: 5px;
+}
+
+.mdl-card-actions a {
   font-size: 12px;
-}
-
-.points {
-  margin-left: 10px;
-
-}
-
-.post-footer button {
+  font-family: 'Viga', 'Open Sans', sans-serif;
+  font-weight: bold;
   text-transform: capitalize;
-  font-family: 'Viga', 'Open Sans', sans-serif;
+  color: white;
+  text-decoration: none;
   color: #757575;
-  font-size: 12px;
-  background-color: rgba(0, 0, 0, 0.1);
+  padding-left: 2px;
+  padding-right: 2px;
 }

@@ -8,19 +8,38 @@
 
 <nav class="user-profil mdl-navigation">
   <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect" id="btn-publier">Publier</button>
-  <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect" id="btn-profil">BECKO</button>
+  <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect" id="btn-profil">{{ current_user.prenom }}</button>
 </nav>
 
 <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-left" for="btn-profil" id="profil-menu">
-  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Profil</li>
-  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider">Compte</li>
-  <li class="mdl-menu__item">Déconnexion</li>
+  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="#">Profil</a></li>
+  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="#">Compte</a></li>
+  <li class="mdl-menu__item"><a href="/logout/">Déconnexion</a></li>
 </ul>
 {% endblock %}
 
+
+{% block drawer %}
+<div class="mdl-layout__drawer">
+  <span class="mdl-layout-title">Thématiques</span>
+  <nav class="mdl-navigation" id="nav-drawer">
+    <a href="#" class="mdl-navigation__link">Éducation</a>
+    <a href="#" class="mdl-navigation__link">Société</a>
+    <a href="#" class="mdl-navigation__link">Santé</a>
+    <a href="#" class="mdl-navigation__link">Politique</a>
+    <a href="#" class="mdl-navigation__link">Économie</a>
+    <a href="#" class="mdl-navigation__link">Innovation</a>
+    <a href="#" class="mdl-navigation__link">Environnement</a>
+    <a href="#" class="mdl-navigation__link">Culture</a>
+    <a href="#" class="mdl-navigation__link">Justice</a>
+  </nav>
+</div>
+{% endblock %}
+
+
 {% block content %}
 {# Section des thématiques sur la gauche #}
-<section class="mdl-cell mdl-cell--2-col mdl-cell--1-offset" id="left-section">
+<!-- <section class="mdl-cell mdl-cell--2-col" id="left-section">
   <div id="thematiques" class="">
     <h6 id="th-title">Thématiques</h6>
     <ul id="th-content" class="side_list">
@@ -35,200 +54,89 @@
       <li><a href="#">Justice</a></li>
     </ul>
   </div>
-</section>
+</section> -->
 
 {# Section des publications, de la timeline #}
-<section class="mdl-cell mdl-cell--6-col" id="center-section">
-  <article class="post mdl-shadow--2dp">
-    <div class="post-header">
-      <img src="" alt="" class="avatar"/>
-      <span class="author"><a href="#">Becko Junior Camara</a></span>
-      <div class="mdl-layout-spacer"></div>
-      <span class="date">23 décembre 2016 14:00</span>
-    </div>
+<div class="mdl-layout-spacer"></div>
+<section class="mdl-cell mdl-cell--9-col" id="center-section">
+  <div class="mdl-grid">
 
-    <div class="post-content">
-      <h3 class="post-title"><a href="#">Titre de la publication</a></h3>
+    <article class="mdl-cell mdl-cell--4-col post mdl-shadow--4dp mdl-card">
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text"><a href="#">Titre de la publication</a></h4>
+      </div>
 
-      <p class="post-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit
-        esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-    </div>
+      <div class="mdl-card__supporting-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
 
-    <hr>
+      <div class="mdl-card-actions mdl-card--border">
+        <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">D'accord</a>
+        <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">Pas d'accord</a>
+      </div>
 
-    <div class="post-footer">
-      <button type="button" name="button" title=" D'accord" class="mdl-button mdl-js-button daccord"><i class="fa fa-arrow-up" aria-hidden="true"></i> D'accord</button>
-    <button type="button" name="button" title=" Pas D'accord" class="mdl-button mdl-js-button pasdaccord"><i class="fa fa-arrow-down" aria-hidden="true"></i> Pas D'accord</button>
-    <span class="points">128 points</span>
-    </div>
-  </article>
+    </article>
 
-  <article class="post mdl-shadow--3dp">
-    <div class="post-header">
-      <img src="" alt="" class="avatar"/>
-      <span class="author"><a href="#">Becko Junior Camara</a></span>
-      <div class="mdl-layout-spacer"></div>
-      <span class="date">23 décembre 2016, 14:00</span>
-    </div>
+    <article class="mdl-cell mdl-cell--4-col post mdl-shadow--4dp mdl-card">
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text"><a href="#">Titre de la publication</a></h4>
+      </div>
 
-    <div class="post-content">
-      <h3 class="post-title"><a href="#">Titre de la publication</a></h3>
+      <div class="mdl-card__supporting-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
 
-      <p class="post-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit
-        esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-    </div>
+      <div class="mdl-card-actions mdl-card--border">
+        <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">D'accord</a>
+        <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">Pas d'accord</a>
+      </div>
 
-    <hr>
+    </article>
 
-    <div class="post-footer">
-      <button type="button" name="button" class="mdl-button mdl-js-button daccord"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-D'accord</button>
-      <button type="button" name="button" class="mdl-button mdl-js-button pasdaccord mdl-badge mdl-badge--overlap" data-badge="2"><i class="fa fa-arrow-down" aria-hidden="true"></i>
-Pas d'accord</button>
-      {# <button type="button" name="button">Partager</button> #}
-    </div>
-  </article>
+    <article class="mdl-cell mdl-cell--4-col post mdl-shadow--4dp mdl-card">
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text"><a href="#">Titre de la publication</a></h4>
+      </div>
 
-  <article class="post mdl-shadow--3dp">
-    <div class="post-header">
-      <img src="" alt="" class="avatar"/>
-      <span class="author"><a href="#">Becko Junior Camara</a></span>
-      <div class="mdl-layout-spacer"></div>
-      <span class="date">23 décembre 2016, 14:00</span>
-    </div>
+      <div class="mdl-card__supporting-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
 
-    <div class="post-content">
-      <h3 class="post-title"><a href="#">Titre de la publication</a></h3>
+      <div class="mdl-card-actions mdl-card--border">
+        <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">D'accord</a>
+        <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">Pas d'accord</a>
+      </div>
 
-      <p class="post-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit
-        esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-    </div>
+    </article>
 
-    <hr>
+    <article class="mdl-cell mdl-cell--4-col post mdl-shadow--4dp mdl-card">
+      <div class="mdl-card__title">
+        <h4 class="mdl-card__title-text"><a href="#">Titre de la publication</a></h4>
+      </div>
 
-    <div class="post-footer">
-      <button type="button" name="button" class="mdl-button mdl-js-button daccord"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-D'accord</button>
-      <button type="button" name="button" class="mdl-button mdl-js-button pasdaccord"><i class="fa fa-arrow-down" aria-hidden="true"></i>
-Pas d'accord</button>
-      {# <button type="button" name="button">Partager</button> #}
-    </div>
-  </article>
+      <div class="mdl-card__supporting-text">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <div class="mdl-card-actions mdl-card--border">
+        <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">D'accord</a>
+        <a href="#" class="mdl-button mdl-js-button mdl-js-ripple-effect">Pas d'accord</a>
+      </div>
 
-  <article class="post mdl-shadow--3dp">
-    <div class="post-header">
-      <img src="" alt="" class="avatar"/>
-      <span class="author"><a href="#">Becko Junior Camara</a></span>
-      <div class="mdl-layout-spacer"></div>
-      <span class="date">23 décembre 2016, 14:00</span>
-    </div>
+    </article>
 
-    <div class="post-content">
-      <h3 class="post-title"><a href="#">Titre de la publication</a></h3>
-
-      <p class="post-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit
-        esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-    </div>
-
-    <hr>
-
-    <div class="post-footer">
-      <button type="button" name="button" class="mdl-button mdl-js-button daccord"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-D'accord</button>
-      <button type="button" name="button" class="mdl-button mdl-js-button pasdaccord"><i class="fa fa-arrow-down" aria-hidden="true"></i>
-Pas d'accord</button>
-      {# <button type="button" name="button">Partager</button> #}
-    </div>
-  </article>
-
-  <article class="post mdl-shadow--3dp">
-    <div class="post-header">
-      <img src="" alt="" class="avatar"/>
-      <span class="author"><a href="#">Becko Junior Camara</a></span>
-      <div class="mdl-layout-spacer"></div>
-      <span class="date">23 décembre 2016, 14:00</span>
-    </div>
-
-    <div class="post-content">
-      <h3 class="post-title"><a href="#">Titre de la publication</a></h3>
-
-      <p class="post-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit
-        esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-    </div>
-
-    <hr>
-
-    <div class="post-footer">
-      <button type="button" name="button" class="mdl-button mdl-js-button daccord"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-D'accord</button>
-      <button type="button" name="button" class="mdl-button mdl-js-button pasdaccord"><i class="fa fa-arrow-down" aria-hidden="true"></i>
-Pas d'accord</button>
-      {# <button type="button" name="button">Partager</button> #}
-    </div>
-  </article>
-
-  <article class="post mdl-shadow--3dp">
-    <div class="post-header">
-      <img src="" alt="" class="avatar"/>
-      <span class="author"><a href="#">Becko Junior Camara</a></span>
-      <div class="mdl-layout-spacer"></div>
-      <span class="date">23 décembre 2016, 14:00</span>
-    </div>
-
-    <div class="post-content">
-      <h3 class="post-title"><a href="#">Titre de la publication</a></h3>
-
-      <p class="post-text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-        ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit
-        esse cillum dolore eu fugiat nulla pariatur.
-      </p>
-    </div>
-
-    <hr>
-
-    <div class="post-footer">
-      <button type="button" name="button" class="mdl-button mdl-js-button daccord"><i class="fa fa-arrow-up" aria-hidden="true"></i>
-D'accord</button>
-      <button type="button" name="button" class="mdl-button mdl-js-button pasdaccord"><i class="fa fa-arrow-down" aria-hidden="true"></i>
-Pas d'accord</button>
-      {# <button type="button" name="button">Partager</button> #}
-    </div>
-  </article>
-
+  </div>
 </section>
 <div class="mdl-layout-spacer"></div>
 {% endblock %}

@@ -10,7 +10,12 @@ body {
 }
 
 .mdl-layout__header-row {
-  background-color: white;
+  background-color: #01579b;
+}
+
+.mdl-layout__header, .mdl-layout__header--waterfall, .mdl-layout__header-row {
+  height: 50px;
+  min-height: 50px;
 }
 
 #logo a {
@@ -20,13 +25,7 @@ body {
   font-weight: bolder;
   font-size: 35px;
   text-decoration: none;
-  color: #01579b;;
-}
-
-.user-profil a {
-  padding: 5px;
-  color: red;
-  text-decoration: none;
+  color: white;
 }
 
 #footer-left > li > a {
