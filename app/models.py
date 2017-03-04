@@ -4,7 +4,7 @@ from datetime import datetime
 
 # Flask extensions import
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField
+from wtforms import StringField, PasswordField, TextAreaField
 from wtforms.validators import DataRequired, Email, InputRequired, Regexp, Length, ValidationError
 from flask_wtf.csrf import CSRFProtect
 
@@ -76,6 +76,14 @@ class RegistrationForm(FlaskForm):
         if utilisateur is not None:
             raise ValidationError("L'utilisateur existe dejà")
 
+
+class EditorForm(FlaskForm):
+    """Editor's form"""
+
+    titre = StringField(u'Titre de la publication', [
+                                                        InputRequired("Veuillez donner un titre à votre publication")
+                                                    ])
+    contenu = TextAreaField(u'Rédigez votre publication ici...', [InputRequired("Votre publication doit avoir du contenuu")])
 
 
 # Collections definition

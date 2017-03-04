@@ -1,4 +1,4 @@
-*.zargo
+*.zargo*
 *.pdf
 note.md
 npm*

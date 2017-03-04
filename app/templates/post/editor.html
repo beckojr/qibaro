@@ -1,1 +1,35 @@
 {% extends "layout.html" %}
+
+{% block stylesheet %}
+<link href="//cdn.quilljs.com/1.2.2/quill.snow.css" rel="stylesheet">
+<link rel="stylesheet" href="{{url_for('static', filename='editor.css')}}" charset="utf-8">
+{% endblock %}
+
+{% block content %}
+<div class="mdl-layout-spacer"></div>
+<div class="mdl-cell mdl-cell--8-col" id="editor-container">
+  <form action="index.html" method="post" id="editor-form">
+    <div class="mdl-textfield mdl-js-textfield ">
+      {{ form.csrf_token }}
+      {{form.titre(class_= 'mdl-textfield__input')}}
+      {{form.titre.label(class_='mdl-textfield__label')}}
+    </div>
+
+    <br>
+    <div class="mdl-textfield mdl-js-textfield">
+      {{ form.csrf_token }}
+      {# {{form.contenu.label(placeholder_='mdl-textfield__label')}} #}
+      {{form.contenu(class_= 'mdl-textfield__input')}}
+    </div>
+
+    <button class="mdl-button mdl-js-button mdl-button--raised"type="submit" name="publier" id="post-button">Publier</button>
+  </form>
+</div>
+<div class="mdl-layout-spacer"></div>
+{% endblock %}
+
+{% block script %}
+<script type="text/javascript">
+  var editor = new Quill('#contenu')
+</script>
+{% endblock %}

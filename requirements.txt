@@ -1,4 +1,4 @@
--e git+https://github.com/beckojr/qibaro.git@14ca6250dcd752b8765fd5ca27da6a04dceba96e#egg=app
+-e git+https://github.com/beckojr/qibaro.git@cb1cf6afef619fa7ff7a73c78369a16947e4e831#egg=app
 bcrypt==3.1.2
 cffi==1.9.1
 click==6.6
@@ -11,6 +11,7 @@ Flask-MongoKit==0.6
 Flask-OAuth==0.12
 Flask-OpenID==1.2.5
 Flask-WTF==0.14.2
+gunicorn==19.6.0
 httplib2==0.9.2
 itsdangerous==0.24
 Jinja2==2.8.1

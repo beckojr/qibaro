@@ -24,6 +24,7 @@
 <body>
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
+{# -------------------------------------------HEADER---------------------------------------------------------------------- #}
     <header class="mdl-layout__header mdl-layout__header--waterfall mdl-shadow--6dp" id="header">
       <div class="mdl-layout__header-row" id="header-row">
         <span class="mdl-layout-title" id="logo"><a href="/">Qibaro</a></span>
@@ -43,7 +44,9 @@
         </ul>
       </div>
     </header>
+{# ----------------------------------------------------------------------------------------------------------------------- #}
 
+{# ---------------------------------------------------DRAWER-------------------------------------------------------------- #}
     <div class="mdl-layout__drawer">
       <span class="mdl-layout-title">Thématiques</span>
       <nav class="mdl-navigation" id="nav-drawer">
@@ -58,18 +61,19 @@
         <a href="#" class="mdl-navigation__link">Justice</a>
       </nav>
     </div>
-
+{# ----------------------------------------------------------------------------------------------------------------------- #}
     <!-- Bloc main de la page  -->
     <main class="mdl-layout__content">
 
-      <!-- Bloc du contenu de la page  -->
+{# ------------------------------------------- Bloc du contenu de la page ------------------------------------------------ #}
       <div class="mdl-grid" id="content">
         {% block content %}
 
         {% endblock %}
       </div>
+{# ----------------------------------------------------------------------------------------------------------------------- #}
 
-      <!-- Pied de page  -->
+{# ------------------------------------------------- Pied de page -------------------------------------------------------- #}
       <footer class="mdl-min-footer">
         <div class="mdl-mini-footer__left-section">
           <ul class="mdl-mini-footer__link-list" id="footer-left">
@@ -81,6 +85,13 @@
           </ul>
         </div>
       </footer>
+ {# ---------------------------------------------------------------------------------------------------------------------- #}
+
+ {# -----------------------------------Editor's initialization script-------------------------------------------------------- #}
+ {% block script %}
+
+ {% endblock %}
+ {# ------------------------------------------------------------------------------------------------------------------- #}
     </main>
   </div>
 </body>
