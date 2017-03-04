@@ -10,20 +10,25 @@ def create_app(config_file):
     bcrypt.init_app(app) # Bcrypt hashing initialisation
     oid.init_app(app) # OpenID initialisation
     login_manager.init_app(app) # flask_login initialisation
-    csrf.init_app(app) # CSRF Protection initialisation for all the app 
+    csrf.init_app(app) # CSRF Protection initialisation for all the app
     # oauth.init_app(app)
 
-    from app.about.views import about_b
-    from app.admin.views import admin_b
-    from app.index.views import index_b
-    from app.profile.views import profile_b
-    from app.signing.views import signing_b
+    # from app.views.about import about
+    # from app.views.admin import admin
+    from app.views.feed import feed
+    # from app.profile.views import profile_b
+    from app.views.signing import signing
+    from app.views.post import post
+    #from app.publications.views import publication_b
 
     # Registration of the blueprints
-    app.register_blueprint(about_b, url_prefixe="/about/")
-    app.register_blueprint(admin_b, url_prefixe="/admin/")
-    app.register_blueprint(index_b) # On arrive directement sur le feed qd on lance l'appli
-    app.register_blueprint(profile_b, url_prefixe="/profile/")
-    app.register_blueprint(signing_b)
+    # app.register_blueprint(about_b, url_prefixe="/about/")
+    # app.register_blueprint(admin_b, url_prefixe="/admin/")
+    app.register_blueprint(feed) # On arrive directement sur le feed qd on lance l'appli
+    # app.register_blueprint(profile_b, url_prefixe="/profile/")
+    app.register_blueprint(signing)
+    app.register_blueprint(post)
+    # app.register_blueprint(publication_b, url_prefixe="/publication/")
+    # app.register_blueprint(layout_b)
 
     return app

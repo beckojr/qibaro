@@ -1,25 +1,21 @@
-.mdl-navigation button {
-  color: white;
-  font-family: 'Viga', 'Open Sans', serif;
-}
-
-#profil-menu li a {
-  font-family: 'Viga', 'Open Sans', serif;
-  text-decoration: none;
+#side-nav a {
+  width: 80%;
+  text-transform: capitalize;
+  text-align: left;
   color: #757575;
 }
 
-.mdl-layout__header--waterfall{
-   overflow: visible;
+#side-nav a:hover {
+  border-left: solid 2px #01579b;
 }
 
-.mdl-layout__drawer-button {
-  position: relative;
-  top: -8px;
-  color: white !important;
-  background-color: #01579b !important;
-}
+h5 {
+  padding-bottom: 15px;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
 
+  text-align: left;
+  color: #757575;
+}
 .post {
   max-height: 620px !important;
   position: relative;

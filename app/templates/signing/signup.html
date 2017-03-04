@@ -1,8 +1,8 @@
-{% extends "signing_layout.html" %}
+{% extends "signing/layout.html" %}
 
 {% block card_text %}
 <!-- Formulaire de connexion -->
-<form class="" action="{{url_for('.signup')}}" method="post">
+<form class="" action="{{url_for('signing_b.signup')}}" method="post">
 
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     {{ form.csrf_token }}

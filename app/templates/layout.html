@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
   <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
   <script src="https://use.fontawesome.com/a7f3555ed9.js"></script>
-  <link rel="stylesheet" href="{{url_for('.static', filename='index_layout.css')}}"/>
+  <link rel="stylesheet" href="{{url_for('static', filename='layout.css')}}"/>
 
   {%block stylesheet%}
 
@@ -29,18 +29,40 @@
         <span class="mdl-layout-title" id="logo"><a href="/">Qibaro</a></span>
 
         <div class="mdl-layout-spacer"></div>
-        {% block nav_block %}
 
-        {% endblock %}
+        {# Barre de navigation principale  #}
+        <nav class="user-profil mdl-navigation">
+          <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect" id="btn-publier">Publier</button>
+          <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect" id="btn-profil">{{ current_user.prenom }}</button>
+        </nav>
+        {# Dropdown du bouton profile  #}
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-left" for="btn-profil" id="profil-menu">
+          <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="#">Profil</a></li>
+          <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="#">Compte</a></li>
+          <li class="mdl-menu__item"><a href="/logout/">Déconnexion</a></li>
+        </ul>
       </div>
     </header>
 
-    {% block drawer %}
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title">Thématiques</span>
+      <nav class="mdl-navigation" id="nav-drawer">
+        <a href="#" class="mdl-navigation__link">Éducation</a>
+        <a href="#" class="mdl-navigation__link">Société</a>
+        <a href="#" class="mdl-navigation__link">Santé</a>
+        <a href="#" class="mdl-navigation__link">Politique</a>
+        <a href="#" class="mdl-navigation__link">Économie</a>
+        <a href="#" class="mdl-navigation__link">Innovation</a>
+        <a href="#" class="mdl-navigation__link">Environnement</a>
+        <a href="#" class="mdl-navigation__link">Culture</a>
+        <a href="#" class="mdl-navigation__link">Justice</a>
+      </nav>
+    </div>
 
-    {% endblock %}
-
+    <!-- Bloc main de la page  -->
     <main class="mdl-layout__content">
 
+      <!-- Bloc du contenu de la page  -->
       <div class="mdl-grid" id="content">
         {% block content %}
 

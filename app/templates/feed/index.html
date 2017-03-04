@@ -1,62 +1,28 @@
-{% extends "index_layout.html" %}
+{% extends 'layout.html'%}
 
 {% block stylesheet %}
-  <link rel="stylesheet" href="{{url_for('.static', filename='index.css')}}"/>
-{% endblock %}
-
-{% block nav_block %}
-
-<nav class="user-profil mdl-navigation">
-  <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect" id="btn-publier">Publier</button>
-  <button type="button" class="mdl-button mdl-js-button mdl-js-ripple-effect" id="btn-profil">{{ current_user.prenom }}</button>
-</nav>
-
-<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-left" for="btn-profil" id="profil-menu">
-  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="#">Profil</a></li>
-  <li class="mdl-menu__item mdl-menu__item--full-bleed-divider"><a href="#">Compte</a></li>
-  <li class="mdl-menu__item"><a href="/logout/">Déconnexion</a></li>
-</ul>
-{% endblock %}
-
-
-{% block drawer %}
-<div class="mdl-layout__drawer">
-  <span class="mdl-layout-title">Thématiques</span>
-  <nav class="mdl-navigation" id="nav-drawer">
-    <a href="#" class="mdl-navigation__link">Éducation</a>
-    <a href="#" class="mdl-navigation__link">Société</a>
-    <a href="#" class="mdl-navigation__link">Santé</a>
-    <a href="#" class="mdl-navigation__link">Politique</a>
-    <a href="#" class="mdl-navigation__link">Économie</a>
-    <a href="#" class="mdl-navigation__link">Innovation</a>
-    <a href="#" class="mdl-navigation__link">Environnement</a>
-    <a href="#" class="mdl-navigation__link">Culture</a>
-    <a href="#" class="mdl-navigation__link">Justice</a>
-  </nav>
-</div>
+  <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}"/>
 {% endblock %}
 
 
 {% block content %}
-{# Section des thématiques sur la gauche #}
-<!-- <section class="mdl-cell mdl-cell--2-col" id="left-section">
-  <div id="thematiques" class="">
-    <h6 id="th-title">Thématiques</h6>
-    <ul id="th-content" class="side_list">
-      <li><a href="#">Éducation</a></li>
-      <li><a href="#">Société</a></li>
-      <li><a href="#">Santé</a></li>
-      <li><a href="#">Politique</a></li>
-      <li><a href="#">Économie</a></li>
-      <li><a href="#">Innovation</a></li>
-      <li><a href="#">Environnement</a></li>
-      <li><a href="#">Culture</a></li>
-      <li><a href="#">Justice</a></li>
-    </ul>
-  </div>
-</section> -->
+<div class="mdl-layout-spacer"></div>
+<aside class="mdl-cell mdl-cell--2-col">
+  <h5>Thématiques</h5>
 
-{# Section des publications, de la timeline #}
+  <nav class="" id="side-nav">
+    <a href="#" class="mdl-button mdl-js-button">Éducation</a>
+    <a href="#" class="mdl-button mdl-js-button">Société</a>
+    <a href="#" class="mdl-button mdl-js-button">Santé</a>
+    <a href="#" class="mdl-button mdl-js-button">Politique</a>
+    <a href="#" class="mdl-button mdl-js-button">Économie</a>
+    <a href="#" class="mdl-button mdl-js-button">Innovation</a>
+    <a href="#" class="mdl-button mdl-js-button">Environnement</a>
+    <a href="#" class="mdl-button mdl-js-button">Culture</a>
+    <a href="#" class="mdl-button mdl-js-button">Justice</a>
+  </nav>
+</aside>
+
 <div class="mdl-layout-spacer"></div>
 <section class="mdl-cell mdl-cell--9-col" id="center-section">
   <div class="mdl-grid">

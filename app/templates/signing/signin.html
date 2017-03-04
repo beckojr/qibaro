@@ -1,8 +1,8 @@
-{% extends "signing_layout.html" %}
+{% extends "signing/layout.html" %}
 
 {% block card_text %}
 <!-- Formulaire de connexion -->
-<form class="" action="{{url_for('.signin')}}" method="POST">
+<form class="" action="{{url_for('signing_b.signin')}}" method="POST">
   <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
     {{ form.csrf_token }}
     {{form.email.label(class_='mdl-textfield__label')}}
@@ -24,5 +24,5 @@
 
 {% block card_footer %}
 <a href="#" id="passw-recov">Mot de passe oublié?</a>
-<a href="{{url_for('.signup')}}" id="signup">S'inscrire</a>
+<a href="{{url_for('signing_b.signup')}}" id="signup">S'inscrire</a>
 {% endblock %}
