@@ -1,0 +1,50 @@
+
+#editor-container {
+  position: relative;
+  background-color: white;
+  padding: 30px;
+}
+
+#editor-form {
+  position: relative;
+  width: 100%;
+  height: inherit;
+}
+
+#titre {
+  font-size: 30px;
+  color: #757575;
+  font-family: 'Playfair Display', serif !important;
+  font-weight: bold;
+}
+
+.mdl-textfield__label {
+  font-size: 30px;
+  font-family: 'Playfair Display', serif !important;
+}
+
+#contenu {
+  position: relative;
+  font-family: 'Martel', serif;
+  color: #757575;
+  min-height: 70vh;
+  max-height: 70vh;
+}
+
+#post-button {
+  position: relative;
+  color: white;
+  background-color: #01579b;
+  font-family: 'Viga', 'Open Sans', sans-serif;
+  margin-top: 10px;
+}
+
+.ql-toolbar {
+  position: relative;
+  width: inherit !important;
+}
+
+#editor-form div {
+  position: relative;
+  width: 285%;
+}
