@@ -7,19 +7,18 @@
 
 {% block content %}
 <div class="mdl-layout-spacer"></div>
-<div class="mdl-cell mdl-cell--8-col" id="editor-container">
+<div class="mdl-cell mdl-cell--12-col" id="editor-container">
   <form action="index.html" method="post" id="editor-form">
     <div class="mdl-textfield mdl-js-textfield ">
       {{ form.csrf_token }}
-      {{form.titre(class_= 'mdl-textfield__input')}}
+      {{form.titre(class_= 'mdl-textfield__input', maxlength='90')}}
       {{form.titre.label(class_='mdl-textfield__label')}}
     </div>
 
     <br>
-    <div class="mdl-textfield mdl-js-textfield">
+    <div class="mdl-textfield mdl-js-textfield" id="contenu">
       {{ form.csrf_token }}
-      {# {{form.contenu.label(placeholder_='mdl-textfield__label')}} #}
-      {{form.contenu(class_= 'mdl-textfield__input')}}
+
     </div>
 
     <button class="mdl-button mdl-js-button mdl-button--raised"type="submit" name="publier" id="post-button">Publier</button>
@@ -29,7 +28,11 @@
 {% endblock %}
 
 {% block script %}
+<script src="//cdn.quilljs.com/1.2.2/quill.min.js"></script>
+
 <script type="text/javascript">
-  var editor = new Quill('#contenu')
+  var quill = new Quill('#contenu', {
+    theme: 'snow'
+  });
 </script>
 {% endblock %}
